@@ -34,7 +34,8 @@ module.exports = [
         auth: true,
         settings: {
             group: "gudang pusat",
-            permission: { "GDG.01": 1, "GDG.02": 1, "GDG.03": 1, "GDG.04": 1, "GDG.05": 1 },
+            permission: { "GMM.01": 1 },
+           // permission: { "GDG.01": 1, "GDG.02": 1, "GDG.03": 1, "GDG.04": 1, "GDG.05": 1 },
             iconClass: 'fa fa-bank'
         }
     }, {
@@ -46,7 +47,8 @@ module.exports = [
         auth: true,
         settings: {
             group: "gudang pusat",
-            permission: { "GDG.01": 1, "GDG.02": 1, "GDG.03": 1, "GDG.04": 1, "GDG.05": 1 },
+            permission: { "GMM.01": 1 },
+            // permission: { "GDG.01": 1, "GDG.02": 1, "GDG.03": 1, "GDG.04": 1, "GDG.05": 1 },
             iconClass: 'fa fa-bank'
         }
     },
@@ -59,7 +61,8 @@ module.exports = [
         auth: true,
         settings: {
             group: "gudang pusat",
-            permission: { "GDG.01": 1 },
+            permission: { "GMM.01": 1 },
+            //permission: { "GDG.01": 1 },
             iconClass: 'fa fa-bank'
         }
     },
@@ -72,21 +75,23 @@ module.exports = [
         auth: true,
         settings: {
             group: "gudang pusat",
-            permission: { "GDG.01": 1, "GDG.02": 1, "GDG.03": 1, "GDG.04": 1, "GDG.05": 1 },
+            permission: { "GMM.01": 1 },
+            // permission: { "GDG.01": 1, "GDG.02": 1, "GDG.03": 1, "GDG.04": 1, "GDG.05": 1 },
             iconClass: 'fa fa-bank'
         }
     },
-    {
-        route: 'efr-kb-rtu',
-        name: 'efr-kb-rtu',
-        moduleId: './modules/efr-kb-rtu-cr/index',
-        nav: true,
-        title: 'Retur Barang Ke Unit',
-        auth: true,
-        settings: {
-            group: "gudang pusat",
-            permission: { "GDG.01": 1, "GDG.02": 1, "GDG.03": 1, "GDG.04": 1, "GDG.05": 1,"GDG.10" : 1 },
-            iconClass: 'fa fa-bank'
-        }
-    }
+    // {
+    //     route: 'efr-kb-rtu',
+    //     name: 'efr-kb-rtu',
+    //     moduleId: './modules/efr-kb-rtu-cr/index',
+    //     nav: true,
+    //     title: 'Retur Barang Ke Unit',
+    //     auth: true,
+    //     settings: {
+    //         group: "gudang pusat",
+    //         //permission: { "GDG.01": 1, "GDG.02": 1, "GDG.03": 1, "GDG.04": 1, "GDG.05": 1,"GDG.10" : 1 },
+    //         permission: { "GMM.01": 1 },
+    //         iconClass: 'fa fa-bank'
+    //     }
+    // }
 ]

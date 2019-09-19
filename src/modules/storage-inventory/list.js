@@ -16,15 +16,31 @@ export class List {
     async activate() { 
     }
 
+    // reloadItem() { 
+    //     this.total=0;
+    //     this.storageId= this.storage._id;
+    //     this.service.getAllInventory(this.storageId, this.filter)
+    //         .then(data => {
+    //             this.data = data;
+    //             for (var item of this.data)
+    //             {
+    //                 this.total=this.total+item.quantity;
+    //             }
+    //         })
+    // }
+
     reloadItem() { 
         this.total=0;
+        this.totalharga=0;
         this.storageId= this.storage._id;
         this.service.getAllInventory(this.storageId, this.filter)
             .then(data => {
                 this.data = data;
                 for (var item of this.data)
                 {
+                    item.subtotale=item.quantity*item.item.domesticSale;
                     this.total=this.total+item.quantity;
+                    this.totalharga=this.totalharga+item.subtotale;
                 }
             })
     }

@@ -7,8 +7,9 @@ module.exports = [
         title: 'Upload Packing List',
         auth: true,
         settings: {
-            group: "finishing",
-            permission: { "FNG.01": 1 },
+           // group: "finishing",
+           group: "efrata",
+            permission: { "GDE.01": 1 },
             iconClass: 'fa fa-bank'
         }
     },
