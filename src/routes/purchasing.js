@@ -21,7 +21,7 @@ module.exports = [
         auth: true,
         settings: {
             group: "purchasing",
-            permission: { "PBL.01": 1 },
+            permission: { "PBU.01": 1 },
             iconClass: 'fa fa-credit-card'
         }
     },
@@ -34,7 +34,7 @@ module.exports = [
         auth: true,
         settings: {
             group: "purchasing",
-            permission: { "PBL.01": 1 },
+            permission: { "PBU.01": 1 },
             iconClass: 'fa fa-credit-card'
         }
     },
@@ -47,7 +47,7 @@ module.exports = [
         auth: true,
         settings: {
             group: "purchasing",
-            permission: { "PBL.01": 7 },
+            permission: { "PBU.01": 7 },
             iconClass: 'fa fa-credit-card'
         }
     },
@@ -60,7 +60,7 @@ module.exports = [
         auth: true,
         settings: {
             group: "purchasing",
-            permission: { "PBL.01": 1 },
+            permission: { "PBU.01": 1 },
             iconClass: 'fa fa-credit-card'
         }
     },
@@ -73,7 +73,7 @@ module.exports = [
         auth: true,
         settings: {
             group: "purchasing",
-            permission: { "PBL.01": 1 },
+            permission: { "PBU.01": 1 },
             iconClass: 'fa fa-credit-card'
         }
     },
@@ -86,7 +86,7 @@ module.exports = [
         auth: true,
         settings: {
             group: "purchasing",
-            permission: { "PBL.01": 1 },
+            permission: { "PBU.01": 1 },
             iconClass: 'fa fa-credit-card'
         }
     },
@@ -99,7 +99,7 @@ module.exports = [
         auth: true,
         settings: {
             group: "purchasing",
-            permission: { "PBL.01": 1 },
+            permission: { "PBU.01": 1 },
             iconClass: 'fa fa-credit-card'
         }
     },
@@ -112,7 +112,7 @@ module.exports = [
         auth: true,
         settings: {
             group: "purchasing",
-            permission: { "PBL.01": 1 },
+            permission: { "PBU.01": 1 },
             iconClass: 'fa fa-credit-card'
         }
     }

@@ -21,7 +21,8 @@ module.exports = [
     auth: true,
     settings: {
       group: "masterplan",
-      permission: { "MRD.01": 1 },
+     // permission: { "MRD.01": 1 },
+      permission: { "PIC.01": 1 },
       iconClass: ""
     }
   },
