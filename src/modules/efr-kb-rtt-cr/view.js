@@ -59,10 +59,10 @@ export class View {
                 this.printStruk += "        <td colspan='3' class='text-left'><b>PT. MAJOR MINOR KREASI NUSANTARA </b> </td>";
                 this.printStruk += "    </tr>";
                 this.printStruk += "    <tr>";
-                this.printStruk += "        <td colspan='3' class='text-left'><b> Kel. Banaran, Kec. Grogol, Kab. Sukoharjo 57193  </b></td>";
+                this.printStruk += "        <td colspan='3' class='text-left'><b> Equity Tower 15th Floor Suite C, SCBD Lot 9, Jl. Jenderal Sudirman Kav 52-53 Jakarta 12190  </b></td>";
                 this.printStruk += "    </tr>";
                 this.printStruk += "    <tr>";
-                this.printStruk += "        <td colspan='3' class='text-left'><b> Jawa Tengah, Indonesia </b> </td>";
+                this.printStruk += "        <td colspan='3' class='text-left'><b>Indonesia </b> </td>";
                 this.printStruk += "    </tr>";
                 this.printStruk += "    <tr>";
                 this.printStruk += "        <td colspan='3' class='text-left'><b>TRANSFER STOK </b><br/></td>";
