@@ -7,8 +7,8 @@ git config --global user.name $GIT_NAME
 
 if [ "$BRANCH" == "dev" ]; then
     git clone $GIT_URL_DEV out
-elif [ "$BRANCH" == "uat" ]; then
-    git clone $GIT_URL_UAT out
+# elif [ "$BRANCH" == "uat" ]; then
+#     git clone $GIT_URL_UAT out
 elif [ "$BRANCH" == "master" ]; then
     git clone $GIT_URL_MASTER out
 fi

@@ -45,4 +45,16 @@ export class StockInStorageDialog {
         })
     }
 
+    excel() {
+        let code = this.data.code;
+        let month = this.data.usedMonth;
+        let year = this.data.usedYear;
+        this.service.generateXls(code, month, year).then(results => {
+            let storageItems = {};
+            console.log(storageItems);
+            storageItems.code = code;
+            storageItems.name = name;
+         })
+     }
+
 }   

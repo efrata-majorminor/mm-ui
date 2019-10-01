@@ -102,6 +102,8 @@ export class Report {
             let storageItems = {};
             storageItems.code = code;
             storageItems.name = name;
+            storageItems.usedMonth = this.usedMonth;
+            storageItems.usedYear = this.usedYear;
             storageItems.items = results;
             this.dialog.show(StockInStorageDialog, storageItems);
         })

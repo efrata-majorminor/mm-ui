@@ -30,7 +30,7 @@ export class Service extends RestService {
 
   getModuleConfig() {
     var config = Container.instance.get(Config);
-    var endpoint = config.getEndpoint("master").client.baseUrl + 'modules?keyword=EFR-KB/RTT';
+    var endpoint = config.getEndpoint("master").client.baseUrl + 'modules?keyword=MM-KB/RTT';
     return super.get(endpoint);
   }
 
@@ -43,6 +43,12 @@ export class Service extends RestService {
   getSPKByReference(codeRTT) {
     var config = Container.instance.get(Config);
     var endpoint = config.getEndpoint("merchandiser").client.baseUrl + 'docs/efr-pk/pending?reference=' + codeRTT;
+    return super.get(endpoint);
+  }
+
+  getPackingListTransferStock(coreRef) {
+    var config = Container.instance.get(Config);
+    var endpoint = config.getEndpoint("merchandiser").client.baseUrl + 'docs/efr-pk-pbj/packingRTT?keyword=' + coreRef;
     return super.get(endpoint);
   }
 

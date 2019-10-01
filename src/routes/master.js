@@ -8,7 +8,7 @@ module.exports = [
     auth: true,
     settings: {
       group: "master",
-      permission: { "MRD.01": 1 },
+     //permission: { "MRD.01": 1 },
       iconClass: "fa fa-adjust"
     }
   },
@@ -21,7 +21,7 @@ module.exports = [
     auth: true,
     settings: {
       group: "master",
-      permission: { "MRD.01": 1 },
+     //permission: { "MRD.01": 1 },
       iconClass: "fa fa-adjust"
     }
   },
@@ -34,7 +34,7 @@ module.exports = [
     auth: true,
     settings: {
       group: "master",
-      permission: { "MRD.01": 1 },
+     //permission: { "MRD.01": 1 },
       iconClass: "fa fa-adjust"
     }
   },
@@ -47,7 +47,7 @@ module.exports = [
     auth: true,
     settings: {
       group: "master",
-      permission: { "MRD.01": 1 },
+    // permission: { "MRD.01": 1 },
       iconClass: "fa fa-adjust"
     }
   },
@@ -60,7 +60,7 @@ module.exports = [
     auth: true,
     settings: {
       group: "master",
-      permission: { "MRD.01": 1 },
+    // permission: { "MRD.01": 1 },
       iconClass: "fa fa-adjust"
     }
   },
@@ -73,7 +73,7 @@ module.exports = [
     auth: true,
     settings: {
       group: "master",
-      permission: { "MRD.01": 1 },
+    //permission: { "MRD.01": 1 },
       iconClass: "fa fa-adjust"
     }
   },
@@ -86,7 +86,7 @@ module.exports = [
     auth: true,
     settings: {
       group: "master",
-      permission: { "MRD.01": 1 },
+    //permission: { "MRD.01": 1 },
       iconClass: "fa fa-adjust"
     }
   },
@@ -99,7 +99,7 @@ module.exports = [
     auth: true,
     settings: {
       group: "master",
-      permission: { "MRD.01": 1 },
+    //permission: { "MRD.01": 1 },
       iconClass: "fa fa-adjust"
     }
   },
@@ -112,7 +112,7 @@ module.exports = [
     auth: true,
     settings: {
       group: "master",
-      permission: { "MRD.01": 1 },
+    //permission: { "MRD.01": 1 },
       iconClass: "fa fa-adjust"
     }
   },
@@ -125,7 +125,7 @@ module.exports = [
     auth: true,
     settings: {
       group: "master",
-      permission: { "PBL.01": 1 },
+      permission: { "PBU.01": 1 },
       iconClass: ""
     }
   },
@@ -138,7 +138,7 @@ module.exports = [
     auth: true,
     settings: {
       group: "master",
-      permission: { "PBL.01": 1 },
+      permission: { "PBU.01": 1 },
       iconClass: ""
     }
   },
@@ -151,7 +151,7 @@ module.exports = [
     auth: true,
     settings: {
         group: "master",
-        permission: { "PBL.01": 1 },
+      // permission: { "PBL.01": 1 },
         iconClass: ''
     }
 },
@@ -177,7 +177,7 @@ module.exports = [
     auth: true,
     settings: {
       group: "master",
-      permission: { "*": 1 },
+    //permission: { "*": 1 },
       iconClass: ""
     }
   }

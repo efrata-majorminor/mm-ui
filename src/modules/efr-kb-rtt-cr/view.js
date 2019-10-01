@@ -18,11 +18,21 @@ export class View {
         this.service.getById(id)
             .then(data => {
                 this.data = data;
-                this.service.getSPKByReference(data.code)
-                    .then(spk => {
+                const jobs = [this.service.getSPKByReference(data.code), this.service.getPackingListTransferStock(data.code)];
+                Promise.all(jobs)
+                    .then(result => {
+                        const spk = result[0];
+                        const packingListTransferStock = result[1];
                         if (spk != undefined && spk.length > 0) {
                             this.password = spk[0].password;
                             this.packingList = spk[0].packingList;
+                        }
+                        if (packingListTransferStock) {
+                            if (packingListTransferStock[0].source.code == packingListTransferStock[1].destination.code) {
+                                this.tujuan = packingListTransferStock[0].source;
+                            } else if (packingListTransferStock[0].destination.code == packingListTransferStock[1].source.code) {
+                                this.tujuan = packingListTransferStock[0].destination;
+                            }
                         }
                     }).catch(e => {
                     })
@@ -46,13 +56,13 @@ export class View {
                 this.printStruk = "";
                 this.printStruk += "<table style='width:100%;'>";
                 this.printStruk += "    <tr>";
-                this.printStruk += "        <td colspan='3' class='text-left'><b>PT EFRATA RETAILINDO </b> </td>";
+                this.printStruk += "        <td colspan='3' class='text-left'><b>PT. MAJOR MINOR KREASI NUSANTARA </b> </td>";
                 this.printStruk += "    </tr>";
                 this.printStruk += "    <tr>";
-                this.printStruk += "        <td colspan='3' class='text-left'><b> Kel. Banaran, Kec. Grogol, Kab. Sukoharjo 57193  </b></td>";
+                this.printStruk += "        <td colspan='3' class='text-left'><b> Equity Tower 15th Floor Suite C, SCBD Lot 9, Jl. Jenderal Sudirman Kav 52-53 Jakarta 12190  </b></td>";
                 this.printStruk += "    </tr>";
                 this.printStruk += "    <tr>";
-                this.printStruk += "        <td colspan='3' class='text-left'><b> Jawa Tengah, Indonesia </b> </td>";
+                this.printStruk += "        <td colspan='3' class='text-left'><b>Indonesia </b> </td>";
                 this.printStruk += "    </tr>";
                 this.printStruk += "    <tr>";
                 this.printStruk += "        <td colspan='3' class='text-left'><b>TRANSFER STOK </b><br/></td>";
@@ -92,8 +102,9 @@ export class View {
                 this.printStruk += "    <tr>";
                 this.printStruk += "        <td colspan='3' class='text-left'>";
                 this.printStruk += "            <div class='col-xs-5'> Tujuan </div>";
-                this.printStruk += "            <div class='col-xs-7'> GDG.01-GUDANG BARANG JADI 1 </div>";
-                //this.printStruk += "            <div class='col-xs-7'> " + this.data.source.code + "-" + this.data.source.name + " </div>";
+                //this.printStruk += "            <div class='col-xs-7'> GDG.05-GUDANG TRANSFER STOCK </div>";
+                // this.printStruk += "            <div class='col-xs-7'> GDG.01-GUDANG BARANG JADI 1 </div>";
+                this.printStruk += "            <div class='col-xs-7'> " + this.tujuan.code + "-" + this.tujuan.name + " </div>";
                 this.printStruk += "        </td>";
                 this.printStruk += "    </tr>";
                 
