@@ -29,6 +29,7 @@ export async function configure(aurelia) {
       var merchandiser ="https://mm-inventory-api-dev.azurewebsites.net/v1/merchandiser/";
       var sales = "https://mm-pos-api-dev.azurewebsites.net/v1/sales/";
       var purchasing ="https://mm-inventory-api-dev.azurewebsites.net/v1/purchasing/";
+      var md ="https://com-mm-service-merchandiser-dev.azurewebsites.net/v1/";
       
       //Config API
       config.registerEndpoint("auth", auth);
@@ -40,6 +41,7 @@ export async function configure(aurelia) {
       //config.registerEndpoint("md", md);
       config.registerEndpoint("sales", sales);
       config.registerEndpoint("purchasing", purchasing);
+      config.registerEndpoint("md", md);
       //config.registerEndpoint("masterplan", masterplan);
     })
     .plugin("aurelia-authentication", baseConfig => {

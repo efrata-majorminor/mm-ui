@@ -11,7 +11,7 @@ module.exports = [
             permission: { "MRD.01": 1 },
             iconClass: 'fa fa-adjust'
         }
-    }
+    },
     // {
     //     route: 'bank',
     //     name: 'bank',
@@ -38,19 +38,19 @@ module.exports = [
     //         iconClass: 'fa fa-university'
     //     }
     // },
-    // {
-    //     route: 'cost-calculation-retail',
-    //     name: 'cost-calculation-retail',
-    //     moduleId: './modules/merchandiser/cost-calculation-retail/index',
-    //     nav: true,
-    //     title: 'Cost Calculation Retail',
-    //     auth: true,
-    //     settings: {
-    //         group: "merchandiser",
-    //         permission: { "MRD.01": 1 },
-    //         iconClass: 'fa fa-university'
-    //     }
-    // },
+    {
+        route: 'cost-calculation-retail',
+        name: 'cost-calculation-retail',
+        moduleId: './modules/merchandiser/cost-calculation-retail/index',
+        nav: true,
+        title: 'Cost Calculation Retail',
+        auth: true,
+        settings: {
+            group: "merchandiser",
+            permission: { "MRD.01": 1 },
+            iconClass: 'fa fa-university'
+        }
+    },
     // {
     //     route: 'cost-calculation-garment',
     //     name: 'cost-calculation-garment',
@@ -64,19 +64,19 @@ module.exports = [
     //         iconClass: 'fa fa-university'
     //     }
     // },
-    // {
-    //     route: 'ro-retail',
-    //     name: 'ro-retail',
-    //     moduleId: './modules/merchandiser/ro-retail/index',
-    //     nav: true,
-    //     title: 'RO Retail',
-    //     auth: true,
-    //     settings: {
-    //         group: "merchandiser",
-    //         permission: { "MRD.01": 1 },
-    //         iconClass: 'fa fa-university'
-    //     }
-    // },
+    {
+        route: 'ro-retail',
+        name: 'ro-retail',
+        moduleId: './modules/merchandiser/ro-retail/index',
+        nav: true,
+        title: 'RO Retail',
+        auth: true,
+        settings: {
+            group: "merchandiser",
+            permission: { "MRD.01": 1 },
+            iconClass: 'fa fa-university'
+        }
+    },
     // {
     //     route: 'ro-garment',
     //     name: 'ro-garment',
