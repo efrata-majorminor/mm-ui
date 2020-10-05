@@ -43,7 +43,9 @@ export class RestService {
   }
 
   get(endpoint, header, info) {
+    // console.log(endpoint)
     var promise = this.endpoint.find(endpoint, info)
+
     this.publish(promise);
     return promise
       .then((result) => {
@@ -126,7 +128,7 @@ export class RestService {
     
     var request = {
       method: 'GET',
-      headers: new Headers(Object.assign({}, this.header, header, { "Accept": "application/pdf" }))
+      headers: new Headers(Object.assign({}, this.header, header, { "Accept": "application/pdf", "x-timezone-offset": this.endpoint.defaults.headers["x-timezone-offset"] }))
     };
     var getRequest = this.endpoint.client.fetch(endpoint, request)
     this.publish(getRequest);
