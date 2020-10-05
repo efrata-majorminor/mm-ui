@@ -1,16 +1,27 @@
-import { inject, Lazy } from 'aurelia-framework';
-import { HttpClient } from 'aurelia-fetch-client';
-import { RestService } from '../../../utils/rest-service';
-import { Container } from 'aurelia-dependency-injection';
-import { Config } from "aurelia-api"
+import {
+  inject,
+  Lazy
+} from 'aurelia-framework';
+import {
+  HttpClient
+} from 'aurelia-fetch-client';
+import {
+  RestService
+} from '../../../utils/rest-service';
+import {
+  Container
+} from 'aurelia-dependency-injection';
+import {
+  Config
+} from "aurelia-api"
 
 
-const serviceUri = 'items/finished-goods';
+const serviceUri = '/items/finished-goods';
 
-export class Service extends RestService {
+export class ServiceLocal extends RestService {
 
   constructor(http, aggregator, config, api) {
-    super(http, aggregator, config, "master");
+    super(http, aggregator, config, "masterLocal");
   }
 
   // search(keyword) {
@@ -23,7 +34,7 @@ export class Service extends RestService {
   }
 
   searchByRo(ro) {
-    var roTemp =encodeURIComponent(ro);
+    var roTemp = encodeURIComponent(ro);
     var endpoint = `${serviceUri}/ro/${roTemp}`;
     return super.get(endpoint);
   }
@@ -61,12 +72,6 @@ export class Service extends RestService {
     var endpoint = `${serviceUri}/${data._id}`;
     return super.put(endpoint, data);
   }
-
-  uploadimage(data) {
-    var endpoint = `${serviceUri}/upload/image`;
-    return super.put(endpoint, data);
-  }
-
 
   delete(data) {
     var endpoint = `${serviceUri}/${data._id}`;

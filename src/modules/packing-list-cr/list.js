@@ -8,8 +8,15 @@ var locale = 'id-ID';
 export class List {
     context = ['detail'];
     data = [];
-    info = { page: 1, keyword: '' };
+    info = {
+      page: 1,
+      keyword: '',
+      filter: JSON.stringify({
+        "IsReceived": false
+      })
+    };
     keyword = '';
+
 
     constructor(router, service) {
         this.router = router;
