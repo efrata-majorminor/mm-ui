@@ -173,7 +173,7 @@ export class DataForm {
         if(!_data){
           let args = {
             itemData: newValue,
-            source: this.destination._id,
+            source: this.data.source._id,
           };
            this.service.getByCode(args).then(result => {
              //var datas = result;
@@ -223,7 +223,7 @@ export class DataForm {
                   this.sumTotalQty = 0;
                   this.sumPrice = 0;
                   let args = {
-                    source: this.data.destination._id,
+                    source: this.data.source._id,
                     itemData: selectedSupplier.name,
                   };
                       this.service.getByName(args).then(result => {

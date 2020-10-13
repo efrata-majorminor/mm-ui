@@ -62,7 +62,7 @@ export class Service extends RestService {
   getSources() {
     var module = 'MM-PK/PLB';
     var config = Container.instance.get(Config);
-    var endpoint = config.getEndpoint("master");
+    var endpoint = config.getEndpoint("core");
     var uri = `storages/source?keyword=${module}`;
     return endpoint.find(uri);
   }
@@ -80,7 +80,7 @@ export class Service extends RestService {
   getByCode(args) {
     console.log(args);
     var config = Container.instance.get(Config);
-    var endpoint = config.getEndpoint("inventory").client.baseUrl + 'inventory/code?itemData=${args.itemData}&source=${args.source}';
+    var endpoint = config.getEndpoint("inventory").client.baseUrl + `inventory/code?itemData=${args.itemData}&source=${args.source}`;
     // return super.list(endpoint, args);
     //var endpoint = `${serviceUri}?itemData=${args.itemData}&source=${args.source}`
     return super.get(endpoint);

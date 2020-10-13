@@ -41,12 +41,12 @@ export class Create {
             e.dateFrom = "Tanggal Kirim harus diisi";
             this.error = e;
         } else {
-            formData.append("sourceId", source._id);
-            formData.append("destinationId", destination._id);
-            formData.append("date", date);
+            // formData.append("sourceId", source._id);
+            // formData.append("destinationId", destination._id);
+            // formData.append("date", date);
             formData.append("fileUpload", fileList[0]);
 
-            var endpoint = '/upload';;
+            var endpoint = `warehouse/upload-pkbj/upload?source=${source._id}&sourcec=${source.Code}&sourcen=${source.Name}&destination=${destination._id}&destinationc=${destination.Code}&destinationn=${destination.Name}&date=${date}`;
             var request = {
                 method: 'POST',
                 headers: {

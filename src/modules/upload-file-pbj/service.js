@@ -4,7 +4,8 @@ import { RestService } from '../../utils/rest-service';
 import { Container } from 'aurelia-dependency-injection';
 import { Config } from "aurelia-api"
 
-const serviceUri = '/docs/efr-pk-pbj';
+const serviceUri = 'warehouse/upload-pkbj';
+//const serviceUriread = 'pkpbj/by-user'
 
 export class Service extends RestService {
   constructor(http, aggregator, config, api) {
@@ -12,13 +13,13 @@ export class Service extends RestService {
   }
 
   search(info) {
-    var endpoint = `${serviceUri}`;
+    var endpoint = 'pkpbj/by-user';
     return super.list(endpoint, info);
   }
 
   getModuleConfig() {
     var config = Container.instance.get(Config);
-    var endpoint = config.getEndpoint("master").client.baseUrl + 'modules?keyword=EFR-PK/PBJ';
+    var endpoint = config.getEndpoint("master").client.baseUrl + 'modules?keyword=MM-PK/PLB';
     return super.get(endpoint);
   }
 
@@ -29,8 +30,29 @@ export class Service extends RestService {
   }
 
   getById(id) {
-    var endpoint = '/docs/efr-pk-pbj/draft/' + id;
+    var endpoint = `pkpbj/by-user/${id}`;
     return super.get(endpoint);
+  }
+
+  getById(id) {
+    var endpoint = `${serviceUri}/${id}`;
+    return super.get(endpoint);
+  }
+
+  getDestinations() {
+    var module = 'EFR-PK/PBJ';
+    var config = Container.instance.get(Config);
+    var endpoint = config.getEndpoint("core");
+    var uri = `storages/destination?keyword=${module}`;
+    return endpoint.find(uri);
+  }
+
+  getSources() {
+    var module = 'EFR-PK/PBJ';
+    var config = Container.instance.get(Config);
+    var endpoint = config.getEndpoint("core");
+    var uri = `storages/source?keyword=${module}`;
+    return endpoint.find(uri);
   }
 
 }

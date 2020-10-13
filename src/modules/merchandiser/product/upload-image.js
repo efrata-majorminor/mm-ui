@@ -55,7 +55,8 @@ export class Upload {
 
         this.service.getColors()
             .then(result => {
-                this.article_colors = result.data.data;
+                console.log(result.data)
+                this.article_colors = result.data;
                 if (this.article_colors.length > 0)
                     this.article_color = this.article_colors[0];
                 this.article_colors.forEach((s) => {
