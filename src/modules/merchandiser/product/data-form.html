@@ -1,6 +1,6 @@
 <template>
     <div class="col-md-7">
-        <form class="form-horizontal text-align-left">
+        <form class="form-horizontal text-align-left" >
             <au-textbox                label="Kode"                        value.bind="data.dataDestination[0].code"                                              error.bind="error.code"                     read-only.bind="(readOnly || isEdit)">  </au-textbox>
             <au-textbox                label="Nama"                        value.bind="data.dataDestination[0].name"                                              error.bind="error.name"                     read-only.bind="readOnly">              </au-textbox>
             <au-textbox                label="UOM"                         value.bind="data.dataDestination[0].Uom"                                               error.bind="error.uom"                      read-only.bind="readOnly">              </au-textbox>
@@ -19,14 +19,14 @@
             <textbox                label="Konter"                      value.bind="data.counterDoc.name"                                   error.bind="error.counterName"              read-only.bind="(readOnly || isEdit)">  </textbox>
             <textbox                label="Style"                       value.bind="data.styleDoc.name"                                     error.bind="error.styleName"                read-only.bind="(readOnly || isEdit)">  </textbox>-->
            
-            <au-autocomplete        label="Proses"                              value.bind="data.process.name"                loader.bind="ProcessLoader"                 error.bind="error.process"                             text="name"  read-only.bind="readOnly"></au-autocomplete>
-            <au-autocomplete        label="Bahan"                               value.bind="data.materials.name"               loader.bind="MaterialsLoader"               error.bind="error.materials"                           text="name" read-only.bind="readOnly"></au-autocomplete>
-            <au-autocomplete        label="Komposisi Bahan"                     value.bind="data.materialCompositions.name"    loader.bind="MaterialCompositionsLoader"    error.bind="error.materialCompositions"                text="name" read-only.bind="readOnly"></au-autocomplete>
-            <au-autocomplete        label="Koleksi"                             value.bind="data.collections.name"             loader.bind="CollectionsLoader"             error.bind="error.collections"                         text="name" read-only.bind="readOnly"></au-autocomplete>
-            <au-autocomplete        label="Season"                              value.bind="data.seasons.name"                 loader.bind="SeasonsLoader"                 error.bind="error.seasons"                             text="name" read-only.bind="readOnly"></au-autocomplete>
-            <au-autocomplete        label="Konter"                              value.bind="data.counters.name"                loader.bind="CountersLoader"                error.bind="error.counters"                            text="name" read-only.bind="readOnly"></au-autocomplete>
-            <au-autocomplete        label="Style"                               value.bind="data.subCounters.name"                  loader.bind="SubCountersLoader"             error.bind="error.subCounters"                         text="name" read-only.bind="readOnly"></au-autocomplete>
-            <au-autocomplete        label="Kategori"                            value.bind="data.categories.name"               loader.bind="CategoriesLoader"              error.bind="error.categories"                          text="name" read-only.bind="readOnly"></au-autocomplete>
+            <au-autocomplete        label="Proses"                              value.bind="process"                loader.bind="ProcessLoader"                 error.bind="error.process"                             text="name"  read-only.bind="readOnly"></au-autocomplete>
+            <au-autocomplete        label="Bahan"                               value.bind="materials"               loader.bind="MaterialsLoader"               error.bind="error.materials"                           text="name" read-only.bind="readOnly"></au-autocomplete>
+            <au-autocomplete        label="Komposisi Bahan"                     value.bind="materialCompositions"    loader.bind="MaterialCompositionsLoader"    error.bind="error.materialCompositions"                text="name" read-only.bind="readOnly"></au-autocomplete>
+            <au-autocomplete        label="Koleksi"                             value.bind="collections"             loader.bind="CollectionsLoader"             error.bind="error.collections"                         text="name" read-only.bind="readOnly"></au-autocomplete>
+            <au-autocomplete        label="Season"                              value.bind="seasons"                 loader.bind="SeasonsLoader"                 error.bind="error.seasons"                             text="name" read-only.bind="readOnly"></au-autocomplete>
+            <au-autocomplete        label="Konter"                              value.bind="counters"                loader.bind="CountersLoader"                error.bind="error.counters"                            text="name" read-only.bind="readOnly"></au-autocomplete>
+            <au-autocomplete        label="Style"                               value.bind="subCounters"                  loader.bind="SubCountersLoader"             error.bind="error.subCounters"                         text="name" read-only.bind="readOnly"></au-autocomplete>
+            <au-autocomplete        label="Kategori"                            value.bind="categories"               loader.bind="CategoriesLoader"              error.bind="error.categories"                          text="name" read-only.bind="readOnly"></au-autocomplete>
              
         </form>
     </div>
