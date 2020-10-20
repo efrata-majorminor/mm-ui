@@ -3,7 +3,7 @@ import AutoSuggestReact from '../../../form/basic/react/auto-suggest-react.jsx';
 import { Container } from 'aurelia-dependency-injection';
 import { Config } from "aurelia-api"
 
-const resource = 'stores';
+const resource = 'master/stores';
 
 const empty = {
     code: '',
@@ -50,7 +50,7 @@ StoreAutoSuggestReact.defaultProps = {
         suggestions:
         function (keyword, filter) {
             var config = Container.instance.get(Config);
-            var endpoint = config.getEndpoint("master");
+            var endpoint = config.getEndpoint("core");
             return endpoint.find(resource, { keyword: keyword, filter: JSON.stringify(filter) })
                 .then(results => {
                     return results.data.map(store => {
