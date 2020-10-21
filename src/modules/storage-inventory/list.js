@@ -2,6 +2,8 @@ import { inject, Lazy } from 'aurelia-framework';
 import { Router } from 'aurelia-router';
 import { Service } from './service';
 
+var StorageLoader = require('../../loader/storage-loader');
+
 
 @inject(Router, Service)
 export class List { 
@@ -10,6 +12,7 @@ export class List {
         this.router = router;
         this.service = service;
         this.storageId = "";
+        this.itemCode="";
         this.filter = "";  
     }
 
@@ -32,20 +35,28 @@ export class List {
     reloadItem() { 
         this.total=0;
         this.totalharga=0;
-        this.storageId= this.storage._id;
+        this.storageId= this.storages._id;
+       
         this.service.getAllInventory(this.storageId, this.filter)
             .then(data => {
                 this.data = data;
                 for (var item of this.data)
                 {
-                    item.subtotale=item.quantity*item.item.domesticSale;
-                    this.total=this.total+item.quantity;
+                    item.subtotale=item.Quantity*item.ItemDomesticSale;
+                    this.total=this.total+item.Quantity;
                     this.totalharga=this.totalharga+item.subtotale;
                 }
             })
     }
 
     view(data) { 
-        this.router.navigateToRoute('view', { storageId: data.storageId, itemId: data.itemId });
+        this.router.navigateToRoute('view', { storageId: data.StorageId, itemCode: data.ItemCode });
     } 
+
+
+    get storage() {
+        return StorageLoader;
+    }
+
+  
 }

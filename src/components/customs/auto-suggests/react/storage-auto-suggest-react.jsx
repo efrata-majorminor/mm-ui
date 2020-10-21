@@ -3,10 +3,10 @@ import AutoSuggestReact from '../../../form/basic/react/auto-suggest-react.jsx';
 import { Container } from 'aurelia-dependency-injection';
 import { Config } from "aurelia-api"
 
-const resource = '/storages';
+const resource = 'storages';
 
 const empty = {
-    name: ''
+    Name: ''
 }
 
 'use strict';
@@ -20,7 +20,7 @@ export default class StorageAutoSuggestReact extends AutoSuggestReact {
         var options = Object.assign({}, StorageAutoSuggestReact.defaultProps.options, props.options);
         var initialValue = Object.assign({}, empty, props.value);
         initialValue.toString = function () {
-            return `${this.name}`;
+            return `${this.Name}`;
         };
         this.setState({ value: initialValue, label: initialValue.toString(), options: options, suggestions: [initialValue] });
     }
@@ -48,7 +48,7 @@ StorageAutoSuggestReact.defaultProps = {
                 .then(results => {
                     return results.data.map(currency => {
                         currency.toString = function () {
-                            return `${this.name}`;
+                            return `${this.Name}`;
                         }
                         return currency;
                     });
