@@ -13,7 +13,7 @@ export class Service extends RestService {
   }
 
   search(info) {
-    var endpoint = 'pkpbj/by-user';
+    var endpoint = 'warehouse/upload-pkbj';
     return super.list(endpoint, info);
   }
 
@@ -34,10 +34,10 @@ export class Service extends RestService {
     return super.get(endpoint);
   }
 
-  getById(id) {
-    var endpoint = `${serviceUri}/${id}`;
-    return super.get(endpoint);
-  }
+  // getById(id) {
+  //   var endpoint = `${serviceUri}/${id}`;
+  //   return super.get(endpoint);
+  // }
 
   getDestinations() {
     var module = 'EFR-PK/PBJ';

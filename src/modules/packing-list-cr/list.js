@@ -29,8 +29,8 @@ export class List {
 
     columns = [
         { field: 'packingList', title: 'Nomor Packing List'},
-        { field: 'source.name', title: 'Sumber Penyimpanan'},
-        { field: 'destination.name', title: 'Tujuan Penyimpanan' },
+        { field: 'SourceName', title: 'Sumber Penyimpanan'},
+        { field: 'DestinationName', title: 'Tujuan Penyimpanan' },
         { field: '_createdDate', title: 'Tanggal Kirim',
         formatter: (value, data) => {
             return moment(value).locale(locale).format("DD MMMM YYYY");
